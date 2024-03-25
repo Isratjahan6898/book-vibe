@@ -11,7 +11,7 @@ const Navbar = () => {
     
     </>
     return (
-        <div className="mx-[50px] lg:mx-[100px] lg:mt-[40px]">
+        <div className="mx-[50px] lg:mx-[100px] mt-[40px]">
             <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
@@ -37,9 +37,9 @@ const Navbar = () => {
       { links}
     </ul>
   </div>
-  <div className=" navbar-end  mt-[150px] ml-[-60px]">
-    <a className="btn mr-[20px] bg-[#23BE0A] text-white">Sign Up</a>
-    <a className="btn bg-[#59C6D2] text-white ">Sign In</a>
+  <div className="  lg:navbar-end mt-[150px] ml-[-60px] lg:ml[1px] lg:mt-[0px]">
+    <a className="btn mr-[20px] bg-[#23BE0A] font-bold text-white">Sign Up</a>
+    <a className="btn bg-[#59C6D2] font-bold text-white ">Sign In</a>
   </div>
 </div>
             
