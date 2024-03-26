@@ -10,11 +10,11 @@ const Books= () => {
         .then(data =>setBooks(data))
     },[])
     return (
-        <div className="mt-[50px] mx-[100px]">
+        <div className="mt-[50px] mx-[30px] lg:mx-[100px]">
 
             <h1 className="text-center text-4xl font-bold my-[30px] ">Books</h1>
 
-            <div className="grid grid-cols-3 gap-[16px]">
+            <div className="grid  lg:grid-cols-3 gap-[16px]">
                 {
                     books.map (book => <Book book={book} key ={book.id}></Book> )
                 }
