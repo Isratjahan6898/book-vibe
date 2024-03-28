@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
-
+import { useState } from "react";
+import { saveBooks, saveWishlistBooks } from "../localStorages/localStorage";
 
 const BookDetails = () => {
 
@@ -11,6 +12,18 @@ const BookDetails = () => {
     console.log(book)
     const {tags, yearOfPublishing} = book;
     const [first, second]= tags;
+
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+  const handleReadBooks = () => {
+    saveBooks(idInt);
+    setButtonClicked(true);
+  };
+
+  const handleWishListBooks = () => {
+    saveWishlistBooks(idInt);
+  };
+
    
 
 
@@ -47,9 +60,10 @@ const BookDetails = () => {
     <hr className="border-dotted border-2"></hr>
 
       <div className="my-[16px]">
-      <button className="btn btn-primary">Read</button>
+      <button  onClick={handleReadBooks} className="btn btn-primary">Read</button>
       
-      <button className="btn ml-[20px] bg-[#50B1C9]">WhisList</button>
+      <button   onClick={handleWishListBooks}
+              disabled={buttonClicked} className="btn ml-[20px] bg-[#50B1C9]">WhisList</button>
       </div>
     </div>
   </div>

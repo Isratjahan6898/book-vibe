@@ -14,6 +14,9 @@ import ListedPage from './Components/ListedPage/ListedPage';
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import BookDetails from './Components/BookDetails/BookDetails';
+import ReadBooks from './Components/ReadBook/ReadBooks';
+import WishList from './Components/WishList/WishList';
+
 
 const router = createBrowserRouter([
   {
@@ -31,9 +34,19 @@ const router = createBrowserRouter([
       },
       {
         path:"/listed",
-        element:<ListedPage></ListedPage>
+        element:<ListedPage></ListedPage>,
+       
+       
+       },
 
-      },
+       {
+        path:"/readlist",
+        element:<ReadBooks></ReadBooks>
+       },
+       {
+        path:"/whislist",
+        element:<WishList></WishList>
+       },
 
       {
         path:"/about",
