@@ -10,12 +10,16 @@ import Home from './Components/Home/Home';
 import Root from './Components/Root/Root';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import ReadPage from './Components/ReadPage/ReadPage';
-import ListedPage from './Components/ListedPage/ListedPage';
+
 import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import BookDetails from './Components/BookDetails/BookDetails';
-import ReadBooks from './Components/ReadBook/ReadBooks';
-import WishList from './Components/WishList/WishList';
+
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import 'react-tabs/style/react-tabs.css';
+import ListedPage from './Components/ListedPage/ListedPage';
 
 
 const router = createBrowserRouter([
@@ -35,19 +39,12 @@ const router = createBrowserRouter([
       {
         path:"/listed",
         element:<ListedPage></ListedPage>,
+        loader: () => fetch("/books.json"),
        
        
        },
 
-       {
-        path:"/readlist",
-        element:<ReadBooks></ReadBooks>
-       },
-       {
-        path:"/whislist",
-        element:<WishList></WishList>
-       },
-
+     
       {
         path:"/about",
         element:<About></About>
@@ -69,5 +66,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer></ToastContainer>
   </React.StrictMode>,
 )

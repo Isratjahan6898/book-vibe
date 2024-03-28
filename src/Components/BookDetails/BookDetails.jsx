@@ -1,6 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { useState } from "react";
-import { saveBooks, saveWishlistBooks } from "../localStorages/localStorage";
+import { saveBooks, saveWishlistBooks } from "../../utility/localstorage";
+
+import { toast } from "react-toastify";
+
 
 const BookDetails = () => {
 
@@ -8,7 +11,7 @@ const BookDetails = () => {
     const {id} = useParams()
     //console.log(id, books)
     const idInt = parseInt(id)
-    const book = books.find(book => book.bookId === idInt)
+    const book = books.find(book => book.id === idInt)
     console.log(book)
     const {tags, yearOfPublishing} = book;
     const [first, second]= tags;
@@ -21,7 +24,11 @@ const BookDetails = () => {
   };
 
   const handleWishListBooks = () => {
-    saveWishlistBooks(idInt);
+    if (buttonClicked) {
+      toast.error("You've already marked this book as read.");
+    } else {
+      saveWishlistBooks(idInt);
+    }
   };
 
    
@@ -63,7 +70,7 @@ const BookDetails = () => {
       <button  onClick={handleReadBooks} className="btn btn-primary">Read</button>
       
       <button   onClick={handleWishListBooks}
-              disabled={buttonClicked} className="btn ml-[20px] bg-[#50B1C9]">WhisList</button>
+              className="btn ml-[20px] bg-[#50B1C9]">WhisList</button>
       </div>
     </div>
   </div>

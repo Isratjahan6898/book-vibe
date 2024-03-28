@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const Book = ({book}) => {
 
-    const {image,tags,bookName, author, category, rating, bookId} = book;
+    const {image,tags,bookName, author, category, rating, id} = book;
     const [first, second]= tags;
     console.log(book);
     return (
         <div>
-    <Link to={ `/book/${bookId}`}>
+    <Link to={ `/book/${id}`}>
 
     <div className="card w-[350px] bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">

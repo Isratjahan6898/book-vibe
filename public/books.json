@@ -1,6 +1,6 @@
 [
     {
-      "bookId": 1,
+      "id": 1,
       "bookName": "The Catcher in the Rye",
       "author": "J.D. Salinger",
       "image": "https://i.ibb.co/2MpXgr1/79002.jpg",
@@ -13,7 +13,7 @@
       "yearOfPublishing": 1951
     },
     {
-      "bookId": 2,
+      "id": 2,
       "bookName": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "image": "https://i.ibb.co/xfpG4pP/4573132.jpg",
@@ -26,7 +26,7 @@
       "yearOfPublishing": 1960
     },
     {
-      "bookId": 3,
+      "id": 3,
       "bookName": "1984",
       "author": "George Orwell",
       "image": "https://i.ibb.co/XsLq89K/6682261.jpg",
@@ -39,7 +39,7 @@
       "yearOfPublishing": 1949
     },
     {
-      "bookId": 4,
+      "id": 4,
       "bookName": "Pride and Prejudice",
       "author": "Jane Austen",
       "image": "https://i.ibb.co/bdyjSvG/7497933.jpg",
@@ -52,7 +52,7 @@
       "yearOfPublishing": 1813
     },
     {
-      "bookId": 5,
+      "id": 5,
       "bookName": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "image": "https://i.ibb.co/F7yh26X/7926522.jpg",
@@ -65,7 +65,7 @@
       "yearOfPublishing": 1925
     },
     {
-      "bookId": 6,
+      "id": 6,
       "bookName": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "image": "https://i.ibb.co/1s31NZr/pexels-levent-simsek-4245048.jpg",
